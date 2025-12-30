@@ -1,0 +1,10 @@
+.coverage
+.coverage.*
+*.log
+.DS_Store
+node_modules/
+venv/
+.venv/
+__pycache__/
+.next/
+.gemini/
