@@ -16,7 +16,8 @@ This plan outlines the steps to initialize the project and implement the authent
 - [x] Task: Implement Custom User Model and Configure Limbo DB
 - [x] Task: Write Tests for User Registration Serializer
 - [x] Task: Implement User Registration Logic
-- [~] Task: Conductor - User Manual Verification 'Database and User Model' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Database and User Model' (Protocol in workflow.md)
+  * Checkpoint: 79dda91
 
 ## Phase 3: JWT Backend Authentication
 
