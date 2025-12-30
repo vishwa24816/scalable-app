@@ -39,8 +39,8 @@ This plan outlines the steps to initialize the project and implement the authent
 
 ## Phase 5: RBAC and Admin Foundation
 
-- [ ] Task: Write Tests for Role-Based Permission Classes in Django
-- [ ] Task: Implement RBAC Middleware and Permission Enforcement
-- [ ] Task: Write Tests for Role-Specific UI Rendering in Next.js
-- [ ] Task: Implement Initial Dashboard Shell with Role-Aware Menu
-- [ ] Task: Conductor - User Manual Verification 'RBAC and Admin Foundation' (Protocol in workflow.md)
+- [x] Task: Write Tests for Role-Based Permission Classes in Django
+- [~] Task: Implement RBAC Middleware and Permission Enforcement
+- [x] Task: Write Tests for Role-Specific UI Rendering in Next.js
+- [x] Task: Implement Initial Dashboard Shell with Role-Aware Menu
+- [~] Task: Conductor - User Manual Verification 'RBAC and Admin Foundation' (Protocol in workflow.md)
