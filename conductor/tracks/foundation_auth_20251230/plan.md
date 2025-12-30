@@ -43,4 +43,5 @@ This plan outlines the steps to initialize the project and implement the authent
 - [~] Task: Implement RBAC Middleware and Permission Enforcement
 - [x] Task: Write Tests for Role-Specific UI Rendering in Next.js
 - [x] Task: Implement Initial Dashboard Shell with Role-Aware Menu
-- [~] Task: Conductor - User Manual Verification 'RBAC and Admin Foundation' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'RBAC and Admin Foundation' (Protocol in workflow.md)
+  * Checkpoint: 55bf00c
