@@ -25,7 +25,8 @@ This plan outlines the steps to initialize the project and implement the authent
 - [x] Task: Implement JWT Authentication Views (SimpleJWT integration)
 - [x] Task: Write Tests for Logout and Token Blacklisting
 - [x] Task: Implement Logout Logic
-- [~] Task: Conductor - User Manual Verification 'JWT Backend Authentication' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'JWT Backend Authentication' (Protocol in workflow.md)
+  * Checkpoint: e74c312
 
 ## Phase 4: Frontend Authentication & State
 
