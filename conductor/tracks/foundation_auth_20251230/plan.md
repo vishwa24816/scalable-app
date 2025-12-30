@@ -21,11 +21,11 @@ This plan outlines the steps to initialize the project and implement the authent
 
 ## Phase 3: JWT Backend Authentication
 
-- [ ] Task: Write Tests for JWT Login and Token Refresh Endpoints
-- [ ] Task: Implement JWT Authentication Views (SimpleJWT integration)
-- [ ] Task: Write Tests for Logout and Token Blacklisting
-- [ ] Task: Implement Logout Logic
-- [ ] Task: Conductor - User Manual Verification 'JWT Backend Authentication' (Protocol in workflow.md)
+- [x] Task: Write Tests for JWT Login and Token Refresh Endpoints
+- [x] Task: Implement JWT Authentication Views (SimpleJWT integration)
+- [x] Task: Write Tests for Logout and Token Blacklisting
+- [x] Task: Implement Logout Logic
+- [~] Task: Conductor - User Manual Verification 'JWT Backend Authentication' (Protocol in workflow.md)
 
 ## Phase 4: Frontend Authentication & State
 
