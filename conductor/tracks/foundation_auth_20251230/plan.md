@@ -30,11 +30,11 @@ This plan outlines the steps to initialize the project and implement the authent
 
 ## Phase 4: Frontend Authentication & State
 
-- [ ] Task: Write Tests for Frontend Auth Service (API calls)
-- [ ] Task: Implement Auth Service and Token Management in Next.js
-- [ ] Task: Write Tests for Auth Context and Protected Route Guards
-- [ ] Task: Implement Auth Context and Private Route Components
-- [ ] Task: Conductor - User Manual Verification 'Frontend Authentication & State' (Protocol in workflow.md)
+- [x] Task: Write Tests for Frontend Auth Service (API calls)
+- [x] Task: Implement Auth Service and Token Management in Next.js
+- [x] Task: Write Tests for Auth Context and Protected Route Guards
+- [x] Task: Implement Auth Context and Private Route Components
+- [~] Task: Conductor - User Manual Verification 'Frontend Authentication & State' (Protocol in workflow.md)
 
 ## Phase 5: RBAC and Admin Foundation
 
