@@ -13,6 +13,7 @@ interface User {
 interface AuthContextType {
   user: User | null;
   login: (email: string, password: string) => Promise<void>;
+  register: (email: string, password: string, name: string) => Promise<void>;
   logout: () => Promise<void>;
   isLoading: boolean;
 }
@@ -28,10 +29,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const initAuth = async () => {
       const accessToken = localStorage.getItem('access_token');
       if (accessToken) {
-        // In a real app, you might fetch user profile here
-        // For now, we'll assume the user is logged in if there's a token
-        // and we could decode the token to get basic info.
-        setUser({ email: 'unknown@example.com', name: 'User' });
+        try {
+          const userData = await authService.getProfile();
+          setUser(userData);
+        } catch (error) {
+          console.error('Failed to init auth:', error);
+          localStorage.removeItem('access_token');
+          localStorage.removeItem('refresh_token');
+        }
       }
       setIsLoading(false);
     };
@@ -39,9 +44,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const login = async (email: string, password: string) => {
-    const userData = await authService.login(email, password);
+    await authService.login(email, password);
+    const userData = await authService.getProfile();
     setUser(userData);
     router.push('/dashboard');
+  };
+
+  const register = async (email: string, password: string, name: string) => {
+    await authService.register(email, password, name);
+    // After registration, we usually want to log the user in
+    // or redirect to login page. For now, let's redirect to login.
+    router.push('/login');
   };
 
   const logout = async () => {
@@ -51,7 +64,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, isLoading }}>
+    <AuthContext.Provider value={{ user, login, register, logout, isLoading }}>
       {children}
     </AuthContext.Provider>
   );

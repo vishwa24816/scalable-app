@@ -17,6 +17,39 @@ export async function login(email: string, password: string) {
   return data;
 }
 
+export async function register(email: string, password: string, name: string) {
+  const response = await fetch(`${API_URL}/user/create/`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password, name }),
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(errorData.detail || 'Registration failed');
+  }
+
+  return await response.json();
+}
+
+export async function getProfile() {
+  const accessToken = localStorage.getItem('access_token');
+  if (!accessToken) throw new Error('No access token');
+
+  const response = await fetch(`${API_URL}/user/me/`, {
+    method: 'GET',
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error('Failed to fetch profile');
+  }
+
+  return await response.json();
+}
+
 export async function logout() {
   const refreshToken = localStorage.getItem('refresh_token');
   const accessToken = localStorage.getItem('access_token');
